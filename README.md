@@ -1,49 +1,46 @@
-# Docker Compose Multi-Container Environment
+# Ambiente Multi-Container com Docker Compose
 
-## Overview
-This project sets up a multi-container environment using Docker Compose with a Node.js application and a PostgreSQL database.
+## Visão Geral
+Este projeto configura um ambiente multi-container usando Docker Compose com uma aplicação Node.js e um banco de dados PostgreSQL.
 
-## Prerequisites
+## Pré-requisitos
 - Docker
 - Docker Compose
 
-## Setup Instructions
+## Instruções de Configuração
 
-### 1. Clone the Repository
+### 1. Clone o Repositório
 ```
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/marcelocarvalhodemoura/docker-configuration-test.git
+cd docker-configuration-test
 ```
 
-### 2. Configure Environment Variables
-Create a `.env` file in the project root with the following content:
+### 2. Configure as Variáveis de Ambiente
+Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
 ```
-DB_USER=myuser
-DB_PASSWORD=mypassword
+DB_USER=seu_usuario
+DB_PASSWORD=sua_senha
 ```
-Adjust the values as necessary.
+Ajuste os valores conforme necessário.
 
-### 3. Build and Run the Containers
-Use Docker Compose to build and run the containers:
+### 3. Construa e Execute os Containers
+Use o Docker Compose para construir e executar os containers:
 ```
 docker-compose up --build
 ```
-This command will start the Node.js application and the PostgreSQL database.
+Este comando iniciará a aplicação Node.js e o banco de dados PostgreSQL.
 
-### 4. Access the Application
-The application will be accessible at `http://localhost:3000`.
+### 4. Acesse a Aplicação
+A aplicação estará acessível em `http://localhost:3000`.
 
-## Database Configuration
-- The PostgreSQL database is configured with a persistent volume to ensure data persistence.
-- Database credentials are managed using environment variables.
+## Configuração do Banco de Dados
+- O banco de dados PostgreSQL é configurado com um volume persistente para garantir a persistência dos dados.
+- As credenciais do banco de dados são gerenciadas usando variáveis de ambiente.
 
-## Security Considerations
-- Avoid using the root user for database operations.
-- Use environment variables to manage sensitive configurations.
+## Considerações de Segurança
+- Evite usar o usuário root para operações no banco de dados.
+- Use variáveis de ambiente para gerenciar configurações sensíveis.
 
-## Troubleshooting
-- Ensure Docker and Docker Compose are installed and running.
-- Verify that the environment variables in the `.env` file are correctly set.
-
-## Conclusion
-This setup provides a robust environment for developing and testing applications with Docker Compose. Feel free to extend the configuration and customize it for your specific needs.
+## Solução de Problemas
+- Certifique-se de que o Docker e o Docker Compose estão instalados e em execução.
+- Verifique se as variáveis de ambiente no arquivo `.env` estão configuradas corretamente.
