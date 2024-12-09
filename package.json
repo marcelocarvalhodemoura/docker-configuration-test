@@ -1,0 +1,12 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "## Overview This project sets up a multi-container environment using Docker Compose with a Node.js application and a PostgreSQL database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
